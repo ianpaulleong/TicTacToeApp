@@ -89,7 +89,7 @@ def predict(img, n: int = 3) -> Dict[str, Union[str, List]]:
         if theReadState[kk] == 1:
             theAdd = 'X'
         elif theReadState[jj] == 1:
-            theAdd = 'O'
+            theAdd = '0'
         theStrState = theStrState + theAdd
         if ii == chosenMove:
             theChosenMoveStr = theChosenMoveStr + '$'
