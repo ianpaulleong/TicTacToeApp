@@ -68,35 +68,52 @@ def predict(img, n: int = 3) -> Dict[str, Union[str, List]]:
     imgTensor = data_transforms(transforms.ToPILImage()(imgTensor))
     imgTensor = imgTensor.unsqueeze(0)
     theReadState = picModel(imgTensor) > 0.45
-    theReadState = theReadState.squeeze()
-    theStrState = ''
-    for ii in range(9):
-        jj = ii + 9
-        if theReadState[ii] == 1:
-            theStrState = theStrState + 'X'
-        elif theReadState[jj] == 1:
-            theStrState = theStrState + 'O'
-        else:
-            theStrState = theStrState + ' '
-            
-        if ii%3 == 2:
-            theStrState = theStrState + '\n'
-    
-    theReadState = theReadState.reshape([6,3])
-    theReadStateX = theReadState[0:3,:]
-    theReadStateO = theReadState[3:6,:]
+    theReadState = theReadState.squeeze()    
+    theReadState63 = theReadState.reshape([6,3])
+    theReadStateX = theReadState63[0:3,:]
+    theReadStateO = theReadState63[3:6,:]
     if theReadStateX.sum().item() == theReadStateO.sum().item():
         numpyState = theReadStateX.detach().numpy().astype(int) - theReadStateO.detach().numpy().astype(int)
     else:
         numpyState = theReadStateO.detach().numpy().astype(int) - theReadStateX.detach().numpy().astype(int)
     chosenMove = sheepModel.chooseMove(numpyState)
-    chosenMove = float(chosenMove)
-    predictions = [{'class': theStrState,'output':'foo','prob':chosenMove/100}]
+    chosenMove = int(chosenMove)
+    chosenMove = rotateNumber(chosenMove)
+    
+    theStrState = ''
+    theChosenMoveStr = ''
+    for ii in range(9):
+        kk = rotateNumber(ii)
+        jj = kk + 9
+        theAdd = ' '
+        if theReadState[kk] == 1:
+            theAdd = 'X'
+        elif theReadState[jj] == 1:
+            theAdd = 'O'
+        theStrState = theStrState + theAdd
+        if ii == chosenMove:
+            theChosenMoveStr = theChosenMoveStr + '$'
+        else:
+            theChosenMoveStr = theChosenMoveStr + theAdd
+    predictions = [{'class': theStrState[0:3],'output':'foo','prob':theChosenMoveStr[0:3]}]
+    predictions.append({'class': theStrState[3:6],'output':'foo','prob':theChosenMoveStr[3:6]})
+    predictions.append({'class': theStrState[6:9],'output':'foo','prob':theChosenMoveStr[6:9]})
 #    predictions.append(
 #            {"class": image_class.replace("_", " "), "output": output, "prob": prob}
 #        )
     return {"class": theStrState, "predictions": predictions}
 
+def rotateNumber(numIn):
+    # map 
+    # 012
+    # 345
+    # 678
+    # to
+    # 258
+    # 147
+    # 036
+    transformationList = [2,5,8,1,4,7,0,3,6]
+    return transformationList[numIn]
 
 @app.route('/api/classify', methods=['POST', 'GET'])
 def upload_file():
