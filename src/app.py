@@ -107,8 +107,8 @@ def predict(img, n: int = 3) -> Dict[str, Union[str, List]]:
 #    return flask.jsonify(res)
 @app.route('/api/classify', methods=['POST', 'GET'])
 def upload_file():
-    url = flask.request.args.get("url")
-    img = load_image_url(url)
+    bytes = flask.request.files['file'].read()
+    img = load_image_bytes(bytes)
     res = predict(img)
     return flask.jsonify(res)
 
