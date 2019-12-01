@@ -85,7 +85,7 @@ def predict(img, n: int = 3) -> Dict[str, Union[str, List]]:
     for ii in range(9):
         kk = rotateNumber(ii)
         jj = kk + 9
-        theAdd = ' '
+        theAdd = '-'
         if theReadState[kk] == 1:
             theAdd = 'X'
         elif theReadState[jj] == 1:
