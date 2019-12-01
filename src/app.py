@@ -16,7 +16,7 @@ import numpy as np
 import tttPlayer
 from torchvision import transforms
 
-with open("src/app.yaml", 'r') as stream:
+with open("src/config.yaml", 'r') as stream:
     APP_CONFIG = yaml.full_load(stream)
 
 app = Flask(__name__)
