@@ -69,6 +69,7 @@ def predict(img, n: int = 3) -> Dict[str, Union[str, List]]:
         transforms.ToTensor()
     ])
     imgTensor = data_transforms(transforms.ToPILImage()(imgTensor))
+    imgTensor = imgTensor.unsqueeze(0)
     theReadState = picModel(imgTensor) > 0.45
     theStrState = ''
     for ii in range(9):
