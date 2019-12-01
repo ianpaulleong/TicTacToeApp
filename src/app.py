@@ -59,7 +59,9 @@ def load_image_bytes(raw_bytes: ByteString) -> Image:
 #    predictions = predictions[0:n]
 #    return {"class": str(pred_class), "predictions": predictions}
 def predict(img, n: int = 3) -> Dict[str, Union[str, List]]:
-    print('COW')
+    img
+    print(img)
+    img = torch.tensor(img)
     theReadState = picModel(img) > 0.45
     theStrState = ''
     for ii in range(9):
