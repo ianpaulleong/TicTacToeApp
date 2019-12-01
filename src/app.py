@@ -85,7 +85,8 @@ def predict(img, n: int = 3) -> Dict[str, Union[str, List]]:
             
         if ii%3 == 2:
             theStrState = theStrState + '\n'
-            
+    
+    theReadState = theReadState.reshape([6,3])
     theReadStateX = theReadState[0:3,:]
     theReadStateO = theReadState[3:6,:]
     if theReadStateX.sum().item() == theReadStateO.sum().item():
