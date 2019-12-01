@@ -14,7 +14,6 @@ import json
 import pickle
 import numpy as np
 import tttPlayer
-from torchvision import transforms
 
 
 with open("src/config.yaml", 'r') as stream:
@@ -59,14 +58,11 @@ def load_image_bytes(raw_bytes: ByteString) -> Image:
 #    predictions = sorted(predictions, key=lambda x: x["output"], reverse=True)
 #    predictions = predictions[0:n]
 #    return {"class": str(pred_class), "predictions": predictions}
-def predict(imgIn, n: int = 3) -> Dict[str, Union[str, List]]:
-    data_transforms = transforms.Compose([
-        transforms.Resize(244),
-        #transforms.CenterCrop(224),
-        transforms.ToTensor()
-    ])
-    img = data_transforms(imgIn)
-    theReadState = picModel(img) > 0.45
+def predict(img, n: int = 3) -> Dict[str, Union[str, List]]:
+    print('\n\n\n\n')
+    print(img.size)
+    print('\n\n\n\n')
+    theReadState = picModel(img.data) > 0.45
     theStrState = ''
     for ii in range(9):
         jj = ii + 9
