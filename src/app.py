@@ -59,9 +59,6 @@ def load_image_bytes(raw_bytes: ByteString) -> Image:
 #    predictions = predictions[0:n]
 #    return {"class": str(pred_class), "predictions": predictions}
 def predict(img, n: int = 3) -> Dict[str, Union[str, List]]:
-    print('\n\n\n\n')
-    print(img.size)
-    print('\n\n\n\n')
     imgTensor = img.data
     data_transforms = transforms.Compose([
         transforms.Resize(244),
@@ -74,9 +71,13 @@ def predict(img, n: int = 3) -> Dict[str, Union[str, List]]:
     theStrState = ''
     for ii in range(9):
         jj = ii + 9
-        if theReadState[ii] == 1:
+        print('\n\n\n\n')
+        print(theReadState)
+        print(theReadState[ii])
+        print('\n\n\n\n')
+        if theReadState[ii].item() == 1:
             theStrState = theStrState + 'X'
-        elif theReadState[jj] == 1:
+        elif theReadState[jj].item() == 1:
             theStrState = theStrState + 'O'
         else:
             theStrState = theStrState + ' '
