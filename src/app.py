@@ -13,6 +13,8 @@ import torch
 import json
 import pickle
 import numpy as np
+import tttPlayer
+
 
 with open("src/config.yaml", 'r') as stream:
     APP_CONFIG = yaml.full_load(stream)
