@@ -78,7 +78,7 @@ def predict(img, n: int = 3) -> Dict[str, Union[str, List]]:
         numpyState = theReadStateO.detach().numpy().astype(int) - theReadStateX.detach().numpy().astype(int)
     chosenMove = sheepModel.chooseMove(numpyState)
     chosenMove = int(chosenMove)
-    chosenMove = rotateNumber(chosenMove)
+    chosenMove = fixMySillyNumberingSystem(chosenMove)
     
     theStrState = ''
     theChosenMoveStr = ''
@@ -102,6 +102,10 @@ def predict(img, n: int = 3) -> Dict[str, Union[str, List]]:
 #            {"class": image_class.replace("_", " "), "output": output, "prob": prob}
 #        )
     return {"class": theStrState, "predictions": predictions}
+
+def fixMySillyNumberingSystem(numIn):
+    transformationList = [-1,8,5,2,7,4,1,6,3,0]
+    return transformationList[numIn]
 
 def rotateNumber(numIn):
     # map 
