@@ -136,7 +136,7 @@ class MainPage extends React.Component {
         if (predictions.length > 0) {
 
             const predictionItems = predictions.map((item) =>
-                <li>{item.class} ({item.prob}) </li>
+                <li>{item.class}   ({item.prob}) </li>
             );
 
             return (
