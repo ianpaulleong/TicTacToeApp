@@ -1,16 +1,24 @@
-title: Food Images Classifier
-description: Classify food images using deep learning
+title: Tic Tac Toe Evaluator
+description: Evaluate Tic Tac Toe images using deep learning
 about:
 
 
-  This is a Food Images Classifier using Deep Learning built on top of Pytorch.
+  This is Tic-Tac-Toe Evaluator built on top of a Food Images Classifier 
+  using Deep Learning built on top of Pytorch.
 
 
-  The project was build by [Nidhin Pattaniyil](https://npatta01.github.io)
+  The Food Classifier project was build by 
+  [Nidhin Pattaniyil](https://npatta01.github.io)
   and [Reshama Shaikh](https://reshamas.github.io).
 
+  The Tic-Tac-Toe evaluator was built by [Ian Leong] (https://github.com/ianpaulleong)
 
-  More info and the source code can he found below.
+
+
+  More info and the source code can be found below.
+
+
+  - [Tic Tac Toe code] https://github.com/ianpaulleong/TTTAgain
 
 
   - [Blog](https://reshamas.github.io/deploying-deep-learning-models-on-web-and-mobile/)    
