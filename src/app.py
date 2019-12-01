@@ -90,9 +90,12 @@ def predict(img, n: int = 3) -> Dict[str, Union[str, List]]:
     else:
         numpyState = theReadStateO.detach().numpy().astype(int) - theReadStateX.detach().numpy().astype(int)
     chosenMove = sheepModel.chooseMove(numpyState)
-    chosenMove = int(chosenMove)
-    
-    return {"class": theStrState, "predictions": chosenMove}
+    chosenMove = float(chosenMove)
+    predictions = [{'class': theStrState,'output':'foo','prob':chosenMove/100}]
+#    predictions.append(
+#            {"class": image_class.replace("_", " "), "output": output, "prob": prob}
+#        )
+    return {"class": theStrState, "predictions": predictions}
 
 
 @app.route('/api/classify', methods=['POST', 'GET'])
