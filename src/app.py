@@ -138,9 +138,8 @@ def root():
 def before_request():
     app.jinja_env.cache = {}
 
-
-sheepModel = load_model('sheepPlayer.pickle','models')
 picModel = load_model('retrainedModel.pickle','models')
+sheepModel = load_model('sheepPlayer.pickle','models')
 
 if __name__ == '__main__':
     port = os.environ.get('PORT', 5000)
