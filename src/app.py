@@ -68,12 +68,13 @@ def predict(img, n: int = 3) -> Dict[str, Union[str, List]]:
     imgTensor = data_transforms(transforms.ToPILImage()(imgTensor))
     imgTensor = imgTensor.unsqueeze(0)
     theReadState = picModel(imgTensor) > 0.45
+    theReadState = theReadState.squeeze()
     theStrState = ''
     for ii in range(9):
         jj = ii + 9
         print('\n\n\n\n')
         print(theReadState)
-        print(theReadState.size)
+        print(theReadState.size())
         print('\n\n\n\n')
         if theReadState[ii][0] == 1:
             theStrState = theStrState + 'X'
