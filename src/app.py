@@ -94,6 +94,7 @@ def predict(img, n: int = 3) -> Dict[str, Union[str, List]]:
     else:
         numpyState = theReadStateO.detach().numpy().astype(int) - theReadStateX.detach().numpy().astype(int)
     chosenMove = sheepModel.chooseMove(numpyState)
+    chosenMove = int(chosenMove)
     
     return {"class": theStrState, "predictions": chosenMove}
 
