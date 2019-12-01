@@ -95,20 +95,14 @@ def predict(img, n: int = 3) -> Dict[str, Union[str, List]]:
     return {"class": theStrState, "predictions": chosenMove}
 
 
-#@app.route('/api/classify', methods=['POST', 'GET'])
-#def upload_file():
-#    if flask.request.method == 'GET':
-#        url = flask.request.args.get("url")
-#        img = load_image_url(url)
-#    else:
-#        bytes = flask.request.files['file'].read()
-#        img = load_image_bytes(bytes)
-#    res = predict(img)
-#    return flask.jsonify(res)
 @app.route('/api/classify', methods=['POST', 'GET'])
 def upload_file():
-    bytes = flask.request.files['file'].read()
-    img = load_image_bytes(bytes)
+    if flask.request.method == 'GET':
+        url = flask.request.args.get("url")
+        img = load_image_url(url)
+    else:
+        bytes = flask.request.files['file'].read()
+        img = load_image_bytes(bytes)
     res = predict(img)
     return flask.jsonify(res)
 
