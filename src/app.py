@@ -14,7 +14,7 @@ import json
 import pickle
 import numpy as np
 import tttPlayer
-
+from torchvision import transforms
 
 with open("src/config.yaml", 'r') as stream:
     APP_CONFIG = yaml.full_load(stream)
@@ -62,7 +62,15 @@ def predict(img, n: int = 3) -> Dict[str, Union[str, List]]:
     print('\n\n\n\n')
     print(img.size)
     print('\n\n\n\n')
-    theReadState = picModel(img.data) > 0.45
+    imgTensor = img.data
+    
+        data_transforms = transforms.Compose([
+        transforms.Resize(244),
+        #transforms.CenterCrop(224),
+        transforms.ToTensor()
+    ])
+    imgTensor = data_transforms(transforms.ToPILImage()(imgTensor))
+    theReadState = picModel(imgTensor) > 0.45
     theStrState = ''
     for ii in range(9):
         jj = ii + 9
