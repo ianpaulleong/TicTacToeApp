@@ -76,9 +76,9 @@ def predict(img, n: int = 3) -> Dict[str, Union[str, List]]:
         print(theReadState)
         print(theReadState.size())
         print('\n\n\n\n')
-        if theReadState[ii][0] == 1:
+        if theReadState[ii] == 1:
             theStrState = theStrState + 'X'
-        elif theReadState[jj][0] == 1:
+        elif theReadState[jj] == 1:
             theStrState = theStrState + 'O'
         else:
             theStrState = theStrState + ' '
