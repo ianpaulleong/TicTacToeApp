@@ -146,7 +146,9 @@ class MainPage extends React.Component {
             )
 
         } else {
-            return COW
+            return (
+		{100}
+            (
         }
     }
 
