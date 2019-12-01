@@ -63,8 +63,7 @@ def predict(img, n: int = 3) -> Dict[str, Union[str, List]]:
     print(img.size)
     print('\n\n\n\n')
     imgTensor = img.data
-    
-        data_transforms = transforms.Compose([
+    data_transforms = transforms.Compose([
         transforms.Resize(244),
         #transforms.CenterCrop(224),
         transforms.ToTensor()
