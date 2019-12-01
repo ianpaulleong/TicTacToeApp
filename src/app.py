@@ -25,7 +25,7 @@ app = Flask(__name__)
 #    return learn
 
 def load_model(model_name,path = 'models'):
-    with open(path + '/' + model_name) as handle:
+    with open(path + '/' + model_name,'rb') as handle:
         theModel = pickle.load(handle)
     return theModel
 
