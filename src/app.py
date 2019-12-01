@@ -89,15 +89,15 @@ def predict(img, n: int = 3) -> Dict[str, Union[str, List]]:
         if theReadState[kk] == 1:
             theAdd = 'X'
         elif theReadState[jj] == 1:
-            theAdd = '0'
+            theAdd = 'O'
         theStrState = theStrState + theAdd
         if ii == chosenMove:
             theChosenMoveStr = theChosenMoveStr + '$'
         else:
             theChosenMoveStr = theChosenMoveStr + theAdd
-    predictions = [{'class': theStrState[0:3],'output':'foo','prob':theChosenMoveStr[0:3]}]
-    predictions.append({'class': theStrState[3:6],'output':'foo','prob':theChosenMoveStr[3:6]})
-    predictions.append({'class': theStrState[6:9],'output':'foo','prob':theChosenMoveStr[6:9]})
+    predictions = [{'class': theStrState[0:3],'output':'foo','prob': '... ' + theChosenMoveStr[0:3]}]
+    predictions.append({'class': theStrState[3:6],'output':'foo','prob':'... ' + theChosenMoveStr[3:6]})
+    predictions.append({'class': theStrState[6:9],'output':'foo','prob':'... ' + theChosenMoveStr[6:9]})
 #    predictions.append(
 #            {"class": image_class.replace("_", " "), "output": output, "prob": prob}
 #        )
