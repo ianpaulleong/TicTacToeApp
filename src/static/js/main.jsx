@@ -147,7 +147,9 @@ class MainPage extends React.Component {
 
         } else {
             return (
-		{100}
+            <ul>
+		     {100}
+            </ul>
             (
         }
     }
