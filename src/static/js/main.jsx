@@ -164,7 +164,7 @@ class MainPage extends React.Component {
             <div>
                 <h2>{APP_CONFIG.description}</h2>
 
-                <p>Select an image </p>
+//                <p>Select an image </p>
 
                 <Form>
 //                    <FormGroup>
@@ -191,8 +191,8 @@ class MainPage extends React.Component {
 //                            />
 //                        </div>
 //                    </FormGroup>
-
-                    <h3>OR</h3>
+//
+//                    <h3>OR</h3>
                     <FormGroup id={"upload_button"}>
                         <div>
                             <p>Upload an image</p>
