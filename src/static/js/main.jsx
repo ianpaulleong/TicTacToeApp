@@ -167,30 +167,30 @@ class MainPage extends React.Component {
                 <p>Select an image </p>
 
                 <Form>
-                    <FormGroup>
-                        <div>
-                            <p>Provide a Url</p>
-                            <div>
-
-                                <UncontrolledDropdown >
-                                    <DropdownToggle caret>
-                                        Sample Image Url
-                                    </DropdownToggle>
-                                    <DropdownMenu>
-                                        {sampleImages.map(si =>
-                                            <DropdownItem onClick={()=>this.sampleUrlSelected(si)}>
-                                                {si.name}
-                                            </DropdownItem>)
-                                        }
-
-                                    </DropdownMenu>
-                                </UncontrolledDropdown>
-
-                            </div>
-                            <Input value={this.state.url} name="file" onChange={(e)=>this._onUrlChange(e.target.value)}
-                            />
-                        </div>
-                    </FormGroup>
+//                    <FormGroup>
+//                        <div>
+//                            <p>Provide a Url</p>
+//                            <div>
+//
+//                                <UncontrolledDropdown >
+//                                    <DropdownToggle caret>
+//                                        Sample Image Url
+//                                    </DropdownToggle>
+//                                    <DropdownMenu>
+//                                        {sampleImages.map(si =>
+//                                            <DropdownItem onClick={()=>this.sampleUrlSelected(si)}>
+//                                                {si.name}
+//                                            </DropdownItem>)
+//                                        }
+//
+//                                    </DropdownMenu>
+//                                </UncontrolledDropdown>
+//
+//                            </div>
+//                            <Input value={this.state.url} name="file" onChange={(e)=>this._onUrlChange(e.target.value)}
+//                            />
+//                        </div>
+//                    </FormGroup>
 
                     <h3>OR</h3>
                     <FormGroup id={"upload_button"}>
