@@ -31,13 +31,7 @@ about:
 code: https://github.com/ianpaulleong/TicTacToeApp
 
 sampleImages:
-  - name: lasagne
-    url: https://upload.wikimedia.org/wikipedia/commons/b/ba/Lasagne_-_stonesoup.jpg
-  - name: sushi
-    url: https://upload.wikimedia.org/wikipedia/commons/6/60/Sushi_platter.jpg
-  - name: waffles
-    url: https://upload.wikimedia.org/wikipedia/commons/5/5b/Waffles_with_Strawberries.jpg
-  - name: eggplant (not in training data)
-    url: https://upload.wikimedia.org/wikipedia/commons/thumb/7/76/Solanum_melongena_24_08_2012_%281%29.JPG/1280px-Solanum_melongena_24_08_2012_%281%29.JPG
-  - name: table (not in training & not a food)
-    url: https://image.shutterstock.com/image-photo/brown-light-wooden-round-dining-260nw-588358070.jpg 
+  - name: Sample 1
+    url: https://previews.123rf.com/images/lprising/lprising1607/lprising160700001/61316396-a-hand-drawn-tic-tac-toe-game-grid.jpg
+  - name: Sample 2
+    url: https://thumbs.dreamstime.com/z/tic-tac-toe-vector-icon-hand-drawing-game-play-drawn-143732664.jpg
