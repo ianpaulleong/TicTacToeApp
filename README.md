@@ -1,32 +1,28 @@
-# Training the Image Classifier & Creating a Web App
-## Our example:  Food Images Classifier
+# Deploying a Tic-Tac-Toe Web App using Machine Learning
+
+## Overview
+This is the final part of a three-part project to develop a web app utilizing machine learning that could read the board state of a Tic-Tac-Toe (sometimes referred to as Noughts and Crosses) game from a picture and provide a recommended move to the user. In Part 1, I utilized reinforcement learning to train a neural network to play Tic-Tac-Toe optimally. In Part 2, I trained a convolutional neural network to extract a Tic-Tac-Toe board state from an image. In this part, Part 3, those trained networks are deployed to Google Cloud as a web app usable from (theoretically) any device.
 
 ## Citation Note
-If you do use our blog or GitHub repos to create your own web or mobile app, we would appreciate it if you would give our work attribution by sharing the below citation:  
+If you want to attribute me, you can use the following citation:
+>Leong, Ian, [TicTacToeApp](https://github.com/ianpaulleong/TicTacToeApp), 2019
+
+The web app interface I used originally developed by Nidhin Pattaniyil and Reshama Shaikh:
 >Pattaniyil, Nidhin and Shaikh, Reshama, [Deploying Deep Learning Models On Web And Mobile](https://reshamas.github.io/deploying-deep-learning-models-on-web-and-mobile/), 2019
 
-
-This project was completed jointly by [Nidhin Pattaniyil](https://www.linkedin.com/in/nidhinpattaniyil/) and [Reshama Shaikh](https://reshamas.github.io).
-
-The following were used for model **training** (see [requirements.txt](requirements.txt)):    
-- fastai:  version 1.0.42
+The following were used for model **training**:
 - PyTorch:  version  1.0.0
-- Python:  version 3.6
+- Python:  version 3.7.3
 
 The following were used for model **deployment**:    
-- Heroku
+- Google Cloud
 - Flask:  version 1.0
  
 
-## Table of Contents
-1.  [Training the Model](docs/1_training.md) using fastai:  [food classifier notebook](https://github.com/npatta01/food-classifier/blob/master/notebooks/1_train.ipynb)
-2.  [Deploying the App on Heroku](docs/2_heroku_app.md):  our web app is [**food-img-classifier.herokuapp.com**](https://food-img-classifier.herokuapp.com)
-3.  Deploying a Mobile App, see this repo:  [npatta01/mobile-deep-learning-classifier](https://github.com/npatta01/mobile-deep-learning-classifier)
+## Final App
+Available at [**tic-tac-toe-net.appspot.com**](http://tic-tac-toe-net.appspot.com/)
 
 
-## Demo
-
-![Demo](assets/demo.gif)
 
 
  
