@@ -4,21 +4,21 @@ about:
 
 
   This is Tic-Tac-Toe Evaluator built on top of a Food Images Classifier 
-  using Deep Learning built on top of Pytorch.
+  using Deep Learning built on top of Pytorch. It was built by [Ian Leong] (https://github.com/ianpaulleong)
 
 
-  The Food Classifier project was build by 
+  The Food Classifier project was built by 
   [Nidhin Pattaniyil](https://npatta01.github.io)
   and [Reshama Shaikh](https://reshamas.github.io).
 
-  The Tic-Tac-Toe evaluator was built by [Ian Leong] (https://github.com/ianpaulleong)
+  
 
 
 
   More info and the source code can be found below.
 
 
-  - [Tic Tac Toe code] https://github.com/ianpaulleong/TTTAgain
+  - [Tic Tac Toe code] https://github.com/ianpaulleong/TicTacToeApp
 
 
   - [Blog](https://reshamas.github.io/deploying-deep-learning-models-on-web-and-mobile/)    
@@ -28,17 +28,7 @@ about:
   - [Video](https://www.youtube.com/watch?v=7d2qFLeYvRc)
 
 
-  To try out this mobile app
-
-    - [Expo](https://expo.io/@npatta01/food-app)
-
-    - [Android](https://play.google.com/store/apps/details?id=com.rsnp.foodclassifier)
-
-    - [iOS](https://itunes.apple.com/us/app/food-classifier/id1445356461?ls=1&mt=8)
-
-
-
-code: https://github.com/npatta01/web-deep-learning-classifier
+code: https://github.com/ianpaulleong/TicTacToeApp
 
 sampleImages:
   - name: lasagne
