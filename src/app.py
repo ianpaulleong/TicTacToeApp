@@ -67,11 +67,13 @@ def predict(img, n: int = 3) -> Dict[str, Union[str, List]]:
     ])
     imgTensor = data_transforms(transforms.ToPILImage()(imgTensor))
     imgTensor = imgTensor.unsqueeze(0)
-    theReadState = picModel(imgTensor) > 0.45
+    theReadState = picModel(imgTensor)
     theReadState = theReadState.squeeze()    
     theReadState63 = theReadState.reshape([6,3])
     theReadStateX = theReadState63[0:3,:]
+    theReadStateX = theReadStateX > 0.45
     theReadStateO = theReadState63[3:6,:]
+    theReadStateO = theReadStateO > 0.38
     if theReadStateX.sum().item() == theReadStateO.sum().item():
         numpyState = theReadStateX.detach().numpy().astype(int) - theReadStateO.detach().numpy().astype(int)
     else:
