@@ -5,3 +5,4 @@ data/*
 !models/final.pth
 !models/model.pkl
 .idea
+Backup/*
