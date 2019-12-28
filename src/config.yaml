@@ -34,8 +34,10 @@ sampleImages:
   - name: Sample 1
     url: https://ecdn.teacherspayteachers.com/thumbitem/Tic-Tac-Toe-Game-4129207-1539893104/original-4129207-1.jpg
   - name: Sample 2
-    url: https://cdn3.vectorstock.com/i/1000x1000/92/52/tic-tac-toe-hand-drawn-game-on-a-white-vector-28329252.jpg
+    url: https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQAoq_qutiFu7hUrwYoeR7dYNGu8KpGeoDM3uxn6kV-zdNuGTueHg&s
   - name: Sample 3
-    url: https://c8.alamy.com/comp/KDT6B5/drawing-children-watercolor-tic-tac-toe-cartoon-on-a-white-back-KDT6B5.jpg
+    url: https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR7j5vW_YCZt-xvNNqI5aI5Bfnt0Kh5lkYujtc6bnzBosAvh8qL&s
   - name: Sample 4
-    url: https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ1uNogKo-p8PNY7KuyqOHCGq1dCX0pVsC5kP2bMFaI-YEd31wrIA&s
+    url: https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRt__cRS8yYM1Xt8leV_mCJ3UoO4FTYdBfavZ_-HwAThz5X0XqrNw&s
+  - name: Sample 5
+    url: https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRBs1fu-PlE4_wmsNyjShw2vLks3Jy86mf1WMcN4lsdK2kqqoeK8w&s
